@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grad_project/core/const.dart';
-//import 'package:gradapp/core/const.dart';
+// ay haga
 
 class Notifications extends StatelessWidget {
   const Notifications({super.key});
