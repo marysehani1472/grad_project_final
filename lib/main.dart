@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grad_project/core/const.dart';
+import 'package:grad_project/emergency_screen.dart';
 import 'package:grad_project/main_screen.dart';
+import 'package:grad_project/notification.dart';
 
 void main() {
   runApp(const MyApp());
