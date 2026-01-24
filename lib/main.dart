@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grad_project/core/const.dart';
+import 'package:grad_project/features/authentication/presentation/screens/sign_in_sign_up_screen.dart';
 import 'package:grad_project/main_screen.dart';
+import 'package:grad_project/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       ),
 
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: SignInSignUpScreen(),
     );
   }
 }

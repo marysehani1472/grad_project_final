@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:grad_project/core/const.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class WelcomeScreen extends StatelessWidget {
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,17 +25,17 @@ class Login extends StatelessWidget {
               height: 37,
               width: 322,
               decoration: BoxDecoration(
-                color: AppColors.lightNavy,
+                color: AppColors.blue,
                 border: Border.all(color: AppColors.blue, width: 0.66),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(0),
               ),
               child: Padding(
                 padding: const EdgeInsets.only(top: 7),
                 child: Text(
-                  'Phone Number',
+                  'SIGN IN',
                   style: TextStyle(
-                    color: AppColors.blue,
-                    fontSize: 16,
+                    color: AppColors.darkNavy,
+                    fontSize: 15,
                     fontFamily: 'Montserrat',
                   ),
                   textAlign: TextAlign.center,
@@ -49,15 +49,15 @@ class Login extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppColors.lightNavy,
                 border: Border.all(color: AppColors.blue, width: 0.66),
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(0),
               ),
               child: Padding(
                 padding: const EdgeInsets.only(top: 7),
                 child: Text(
-                  'Password',
+                  'SIGN UP',
                   style: TextStyle(
                     color: AppColors.blue,
-                    fontSize: 16,
+                    fontSize: 15,
                     fontFamily: 'Montserrat',
                   ),
                   textAlign: TextAlign.center,

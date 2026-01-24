@@ -24,4 +24,5 @@ class AppColors {
 
 class ScreenConst {
   static const String homeScreen = 'homeScreen';
+  static const String mainScreen = 'mainScreen';
 }
