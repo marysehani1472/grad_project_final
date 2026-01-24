@@ -1,11 +1,162 @@
 import 'package:flutter/material.dart';
+import 'package:grad_project/core/const.dart';
+import 'package:flutter_svg/svg.dart';
 
 class RemoteScreen extends StatelessWidget {
   const RemoteScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 35),
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 20),
+            child: Column(
+              children: [
+                Text(
+                  'Camera Feed',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 21,
+                    fontFamily: 'Montserrat',
+                  ),
+                ),
+                SizedBox(height: 28),
+                Container(
+                  height: 188,
+                  width: 335,
+                  decoration: BoxDecoration(
+                    color: AppColors.darkNavy,
+                    border: Border.all(color: AppColors.white, width: 0.66),
+                    borderRadius: BorderRadius.circular(0),
+                  ),
+                  child: Center(
+                    child: SvgPicture.asset(
+                      'assets/images/remote_screen/camera.svg',
+                      width: 22,
+                      height: 25,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 21),
+                Text(
+                  'NOTE: LIVE FEED DETAILS',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 14,
+                    fontFamily: 'Montserrat',
+                  ),
+                ),
+                SizedBox(height: 61),
+                Text(
+                  'Robot Actions',
+                  style: TextStyle(
+                    color: AppColors.white,
+                    fontSize: 21,
+                    fontFamily: 'Montserrat',
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      height: 59,
+                      width: 154,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightNavy,
+                        border: Border.all(color: AppColors.white, width: 0.66),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Move to Suma',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      height: 59,
+                      width: 154,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightNavy,
+                        border: Border.all(color: AppColors.white, width: 0.66),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Sound Alarm',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      height: 59,
+                      width: 154,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightNavy,
+                        border: Border.all(color: AppColors.white, width: 0.66),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Restart System',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Container(
+                      margin: EdgeInsets.only(top: 20),
+                      height: 59,
+                      width: 154,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightNavy,
+                        border: Border.all(color: AppColors.white, width: 0.66),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'Sleep Mode',
+                          style: TextStyle(
+                            color: AppColors.white,
+                            fontSize: 16,
+                            fontFamily: 'Montserrat',
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
 
