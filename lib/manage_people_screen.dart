@@ -110,7 +110,13 @@ class ManagePeopleScreen extends StatelessWidget {
                           border: Border.all(color: AppColors.grey),
                           borderRadius: BorderRadius.circular(width * 0.053),
                         ),
+                        child: Icon(
+                          Icons.person,
+                          color: AppColors.blue,
+                          size: 40,
+                        ),
                       ),
+
                       // SizedBox(height: 10),
                       // Text(
                       //   singlePerson,

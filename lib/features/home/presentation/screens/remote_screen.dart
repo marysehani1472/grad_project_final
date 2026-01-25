@@ -7,14 +7,17 @@ class RemoteScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = AppSizes.screenWidth(context);
+    double height = AppSizes.screenHeight(context);
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 35),
+      body: SingleChildScrollView(
+        child: Center(
           child: Padding(
-            padding: EdgeInsets.symmetric(vertical: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
             child: Column(
               children: [
+                SizedBox(height: height * 0.09),
+
                 Text(
                   'Camera Feed',
                   style: TextStyle(
@@ -29,22 +32,27 @@ class RemoteScreen extends StatelessWidget {
                   width: 335,
                   decoration: BoxDecoration(
                     color: AppColors.darkNavy,
-                    border: Border.all(color: AppColors.white, width: 0.66),
+                    border: Border.all(color: AppColors.grey, width: 0.66),
                     borderRadius: BorderRadius.circular(0),
                   ),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      'assets/images/remote_screen/camera.svg',
-                      width: 22,
-                      height: 25,
-                    ),
+                  child: Image.asset(
+                    'assets/camera_view.jpg',
+                    fit: BoxFit.cover,
                   ),
+                  // child: Center(
+                  //   child: SvgPicture.asset(
+                  //     'assets/images/remote_screen/camera.svg',
+                  //     width: 22,
+                  //     height: 25,
+                  //   ),
+                  // ),
                 ),
                 SizedBox(height: 21),
                 Text(
                   'NOTE: LIVE FEED DETAILS',
+
                   style: TextStyle(
-                    color: AppColors.white,
+                    color: AppColors.grey,
                     fontSize: 14,
                     fontFamily: 'Montserrat',
                   ),

@@ -4,28 +4,28 @@ import 'package:grad_project/features/authentication/domain/entities/user_entity
 import 'package:grad_project/features/authentication/domain/repositories/auth_repo.dart';
 
 class AuthRepoImpl implements AuthRepo {
-  final AuthRemoteDataSource remoteDataSource;
+  final AuthRemoteDataSource authremoteDataSource;
 
-  AuthRepoImpl({required this.remoteDataSource});
+  AuthRepoImpl({required this.authremoteDataSource});
 
 @override
 Future<String> signIn(AuthEntity auth) async {
-  return await remoteDataSource.signIn(auth);
+  return await authremoteDataSource.signIn(auth);
 }
 
 
   @override
   Future<String> signUp(AuthEntity user) async {
-    return await remoteDataSource.signUp(user);
+    return await authremoteDataSource.signUp(user);
   }
 
   @override
   Future<void> signOut() async {
-    await remoteDataSource.signOut();
+    await authremoteDataSource.signOut();
   }
 
   @override
   Future<UserEntity> getCurrentUser() async {
-    return await remoteDataSource.getCurrentUser();
+    return await authremoteDataSource.getCurrentUser();
   }
 }

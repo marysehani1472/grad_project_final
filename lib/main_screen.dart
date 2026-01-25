@@ -47,7 +47,7 @@ class _MainScreenState extends State<MainScreen> {
               // ),
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.wifi_tethering),
               label: 'REMOTE',
 
               // Image.asset(
@@ -59,7 +59,7 @@ class _MainScreenState extends State<MainScreen> {
               // label: 'Profile',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(Icons.menu),
               label: 'MENU',
 
               // icon: Image.asset(

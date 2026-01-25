@@ -93,11 +93,9 @@
 //   }
 // }
 
-
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:grad_project/core/const.dart';
 import 'package:grad_project/features/authentication/presentation/cubit/cubit/auth_cubit.dart';
 import 'package:grad_project/features/authentication/presentation/cubit/cubit/auth_state.dart';
@@ -129,9 +127,9 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                 // بعد تسجيل الدخول أو التسجيل نروح للصفحة الرئيسية
                 Navigator.pushReplacementNamed(context, ScreenConst.mainScreen);
               } else if (state is AuthError) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text(state.message)),
-                );
+                ScaffoldMessenger.of(
+                  context,
+                ).showSnackBar(SnackBar(content: Text(state.message)));
               }
             },
             builder: (context, state) {
@@ -140,13 +138,10 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'LINK',
-                    style: TextStyle(
-                      color: AppColors.blue,
-                      fontSize: width * 0.06,
-                      fontFamily: 'Montserrat',
-                    ),
+                  SvgPicture.asset(
+                    'assets/images/link_logo/link_logo.svg',
+                    width: 97,
+                    height: 120,
                   ),
                   SizedBox(height: height * 0.06),
 
@@ -156,15 +151,22 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                     width: width * 0.89,
                     decoration: BoxDecoration(
                       color: AppColors.lightNavy,
-                      border: Border.all(color: AppColors.blue, width: width * 0.003),
+                      border: Border.all(
+                        color: AppColors.blue,
+                        width: width * 0.003,
+                      ),
                       borderRadius: BorderRadius.circular(width * 0.055),
                     ),
                     child: TextField(
+                      //textAlignVertical: TextAlignVertical.center,
                       controller: _phoneController,
                       keyboardType: TextInputType.phone,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
                         hintText: 'Phone Number',
                         hintStyle: TextStyle(
                           color: AppColors.blue,
@@ -185,7 +187,10 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                     width: width * 0.89,
                     decoration: BoxDecoration(
                       color: AppColors.lightNavy,
-                      border: Border.all(color: AppColors.blue, width: width * 0.003),
+                      border: Border.all(
+                        color: AppColors.blue,
+                        width: width * 0.003,
+                      ),
                       borderRadius: BorderRadius.circular(width * 0.055),
                     ),
                     child: TextField(
@@ -193,7 +198,10 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                       obscureText: true,
                       decoration: InputDecoration(
                         border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                        contentPadding: EdgeInsets.symmetric(
+                          horizontal: 16,
+                          vertical: 12,
+                        ),
                         hintText: 'Password',
                         hintStyle: TextStyle(
                           color: AppColors.blue,
@@ -217,34 +225,39 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                       ),
                       minimumSize: Size(width * 0.89, height * 0.055),
                     ),
-                    onPressed: isLoading
-                        ? null
-                        : () {
-                            final phone = _phoneController.text.trim();
-                            final password = _passwordController.text.trim();
+                    onPressed: () {
+                      Navigator.pushNamed(context, ScreenConst.mainScreen);
+                    },
+                    //  isLoading
+                    //     ? null
+                    //     : () {
+                    //         final phone = _phoneController.text.trim();
+                    //         final password = _passwordController.text.trim();
 
-                            if (_isLogin) {
-                              context.read<AuthCubit>().signin(
-                                    phone: phone,
-                                    password: password,
-                                  );
-                            } else {
-                              context.read<AuthCubit>().signUp(
-                                    phone: phone,
-                                    password: password,
-                                  );
-                            }
-                          },
-                    child: isLoading
-                        ? CircularProgressIndicator(color: AppColors.white)
-                        : Text(
-                            _isLogin ? 'Login' : 'Sign Up',
-                            style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: width * 0.04,
-                              fontFamily: 'Montserrat',
-                            ),
-                          ),
+                    //         if (_isLogin) {
+                    //           context.read<AuthCubit>().signin(
+                    //                 phone: phone,
+                    //                 password: password,
+                    //               );
+                    //         } else {
+                    //           context.read<AuthCubit>().signUp(
+                    //                 phone: phone,
+                    //                 password: password,
+                    //               );
+                    //         }
+                    //       },
+                    child:
+                    // isLoading
+                    //     ? CircularProgressIndicator(color: AppColors.white)
+                    //     :
+                    Text(
+                      _isLogin ? 'Login' : 'Sign Up',
+                      style: TextStyle(
+                        color: AppColors.white,
+                        fontSize: width * 0.04,
+                        fontFamily: 'Montserrat',
+                      ),
+                    ),
                   ),
 
                   SizedBox(height: 20),
@@ -257,7 +270,9 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                       });
                     },
                     child: Text(
-                      _isLogin ? 'Don\'t have an account? Sign Up' : 'Already have an account? Login',
+                      _isLogin
+                          ? 'Don\'t have an account? Sign Up'
+                          : 'Already have an account? Login',
                       style: TextStyle(
                         color: AppColors.blue,
                         fontSize: width * 0.035,
@@ -273,4 +288,3 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
     );
   }
 }
-

@@ -73,7 +73,7 @@ class NotificationScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Suma detected in Hallway',
+                              'Fire detected in Kitchen',
                               style: TextStyle(
                                 color: AppColors.white,
                                 fontSize: 13,
@@ -143,7 +143,7 @@ class NotificationScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Suma detected in Hallway',
+                              'Fall detected in Hallway',
                               style: TextStyle(
                                 color: AppColors.white,
                                 fontSize: 13,
@@ -151,7 +151,7 @@ class NotificationScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '6:18 AM',
+                              '2:45 AM',
                               style: TextStyle(
                                 color: AppColors.grey,
                                 fontSize: 11,
@@ -212,7 +212,7 @@ class NotificationScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Suma detected in Hallway',
+                              'The Elderly is safe',
                               style: TextStyle(
                                 color: AppColors.white,
                                 fontSize: 13,
@@ -220,7 +220,7 @@ class NotificationScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '6:18 AM',
+                              '5:30 PM',
                               style: TextStyle(
                                 color: AppColors.grey,
                                 fontSize: 11,
@@ -281,7 +281,7 @@ class NotificationScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'Suma detected in Hallway',
+                              'New person detected in Hallway',
                               style: TextStyle(
                                 color: AppColors.white,
                                 fontSize: 13,
@@ -289,7 +289,7 @@ class NotificationScreen extends StatelessWidget {
                               ),
                             ),
                             Text(
-                              '6:18 AM',
+                              '3:50 AM',
                               style: TextStyle(
                                 color: AppColors.grey,
                                 fontSize: 11,

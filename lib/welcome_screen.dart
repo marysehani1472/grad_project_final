@@ -12,56 +12,65 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'LINK',
-              style: TextStyle(
-                color: AppColors.blue,
-                fontSize: 24,
-                fontFamily: 'Montserrat',
-              ),
+            // Text(
+            //   'LINK',
+            //   style: TextStyle(
+            //     color: AppColors.blue,
+            //     fontSize: 24,
+            //     fontFamily: 'Montserrat',
+            //   ),
+            // ),
+            SvgPicture.asset(
+              'assets/images/link_logo/link_logo.svg',
+              width: 97,
+              height: 120,
             ),
+            // Image.asset('assets/link_logo.png', width: 250, height: 250),
             SizedBox(height: 50),
-            Container(
-              height: 37,
-              width: 322,
-              decoration: BoxDecoration(
-                color: AppColors.blue,
-                border: Border.all(color: AppColors.blue, width: 0.66),
-                borderRadius: BorderRadius.circular(0),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 7),
-                child: Text(
-                  'SIGN IN',
-                  style: TextStyle(
-                    color: AppColors.darkNavy,
-                    fontSize: 15,
-                    fontFamily: 'Montserrat',
-                  ),
-                  textAlign: TextAlign.center,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.blue,
+                fixedSize: Size(322, 37),
+                side: BorderSide(color: AppColors.blue, width: 0.66),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
                 ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenConst.signInSignUpScreen);
+              },
+              child: Text(
+                'SIGN IN',
+                style: TextStyle(
+                  color: AppColors.white,
+                  fontSize: 15,
+                  fontFamily: 'Montserrat',
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
+
             SizedBox(height: 9),
-            Container(
-              height: 37,
-              width: 322,
-              decoration: BoxDecoration(
-                color: AppColors.lightNavy,
-                border: Border.all(color: AppColors.blue, width: 0.66),
-                borderRadius: BorderRadius.circular(0),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 7),
-                child: Text(
-                  'SIGN UP',
-                  style: TextStyle(
-                    color: AppColors.blue,
-                    fontSize: 15,
-                    fontFamily: 'Montserrat',
-                  ),
-                  textAlign: TextAlign.center,
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: AppColors.lightNavy,
+                fixedSize: Size(322, 37),
+                side: BorderSide(color: AppColors.blue, width: 0.66),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(0),
                 ),
+              ),
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenConst.signInSignUpScreen);
+              },
+              child: Text(
+                'SIGN UP',
+                style: TextStyle(
+                  color: AppColors.blue,
+                  fontSize: 15,
+                  fontFamily: 'Montserrat',
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
           ],
