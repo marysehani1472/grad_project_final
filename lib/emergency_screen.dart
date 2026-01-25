@@ -210,25 +210,27 @@ class EmergencyCall extends StatelessWidget {
                 ),
 
                 Spacer(),
-                Container(
-                  height: height * 0.057,
-                  width: width * 0.307,
-                  decoration: BoxDecoration(
-                    color: AppColors.lightNavy,
-                    border: Border.all(
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.lightNavy,
+                    side: BorderSide(
                       color: AppColors.grey,
-                      width: width * 0.0018,
+                      width: width * 0.0013,
                     ),
-                    borderRadius: BorderRadius.circular(width * 0.08),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(width * 0.08),
+                    ),
+                    minimumSize: Size(width * 0.307, height * 0.057),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Back',
-                      style: TextStyle(
-                        color: AppColors.blue,
-                        fontSize: width * 0.048,
-                        fontFamily: 'Montserrat',
-                      ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Back',
+                    style: TextStyle(
+                      color: AppColors.blue,
+                      fontSize: width * 0.048,
+                      fontFamily: 'Montserrat',
                     ),
                   ),
                 ),

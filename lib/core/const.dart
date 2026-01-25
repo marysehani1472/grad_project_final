@@ -24,4 +24,11 @@ class AppColors {
 
 class ScreenConst {
   static const String homeScreen = 'homeScreen';
+  static const String mainScreen = 'mainScreen';
+  static const String signInSignUpScreen = 'signInSignUpScreen';
+  static const String emergencyCallScreen = 'emergencyCallScreen';
+  static const String managePeopleScreen = 'managePeopleScreen';
+  static const String profileScreen = 'profileScreen';
+  static const String HelpSupportScreen = 'HelpSupportScreen';
+  static const String notificationScreen = 'notificationScreen';
 }

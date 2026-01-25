@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.darkNavy,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: height * 0.125,
         backgroundColor: AppColors.lightNavy,
         shape: Border(
@@ -37,12 +38,18 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: width * 0.101),
-            child: SvgPicture.asset(
-              'assets/images/notification_icon/notification.svg',
-              width: width * 0.048,
-              height: width * 0.048,
-              key: const ValueKey('home_icon'),
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, ScreenConst.notificationScreen);
+              },
+              icon: Icon(Icons.notifications, color: AppColors.blue),
             ),
+            // SvgPicture.asset(
+            //   'assets/images/notification_icon/notification.svg',
+            //   width: width * 0.048,
+            //   height: width * 0.048,
+            //   key: const ValueKey('home_icon'),
+            // ),
           ),
         ],
       ),
@@ -210,6 +217,12 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(width * 0.08),
                             color: AppColors.paleGreen,
                           ),
+                          //child: Icon(Icons.cloud, color: AppColors.green),
+                          child: Image.asset(
+                            'assets/gass.png',
+                            width: 20,
+                            height: 20,
+                          ),
                           //child:
                           //  SvgPicture.asset(
                           //   'assets/images/gas_icon/gas.svg',
@@ -266,11 +279,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(width * 0.08),
                             color: AppColors.paleGreen,
                           ),
-                          //child:
-                          //  SvgPicture.asset(
-                          //   'assets/images/gas_icon/gas.svg',
-                          //   width: 20,
-                          //   height: 20,
+                          // child: Icon(
+                          //   Icons.local_fire_department,
+                          //   color: AppColors.green,
+                          // ),
+                          child: Image.asset(
+                            'assets/fire.png',
+                            width: 20,
+                            height: 20,
+                          ),
+                          // child: SvgPicture.asset(
+                          //   'assets/fire.svg',
+                          //   width: 10,
+                          //   height: 10,
+                          //   // fit: BoxFit.contain,
                           // ),
                           // Image.asset(
                           //   'assets/images/gas.png',
@@ -327,17 +349,26 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(width * 0.08),
                             color: AppColors.paleGreen,
                           ),
-                          //child:
-                          //  SvgPicture.asset(
-                          //   'assets/images/gas_icon/gas.svg',
+                          // child: SvgPicture.asset(
+                          //   'assets/fall.svg',
+                          //   width: 10,
+                          //   height: 10,
+                          //   //  fit: BoxFit.contain,
+                          // ),
+                          // child: Icon(
+                          //   Icons.warning_amber_rounded,
+                          //   color: AppColors.green,
+                          // ),
+                          // child: SvgPicture.asset(
+                          //   'assets/images/fall_icon/fall.svg',
                           //   width: 20,
                           //   height: 20,
-                          // ),
-                          // Image.asset(
-                          //   'assets/images/gas.png',
-                          //   width: 20,
-                          //   height: 20,
-                          // ),
+                          // // ),
+                          child: Image.asset(
+                            'assets/fall.png',
+                            width: 20,
+                            height: 20,
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: height * 0.01),
@@ -383,17 +414,20 @@ class _HomeScreenState extends State<HomeScreen> {
                             borderRadius: BorderRadius.circular(width * 0.08),
                             color: AppColors.paleGreen,
                           ),
-                          //child:
-                          //  SvgPicture.asset(
-                          //   'assets/images/gas_icon/gas.svg',
+                          // child: Icon(
+                          //   Icons.person_2_outlined,
+                          //   color: AppColors.green,
+                          // ),
+                          // child: SvgPicture.asset(
+                          //   'assets/gas.svg',
                           //   width: 20,
                           //   height: 20,
                           // ),
-                          // Image.asset(
-                          //   'assets/images/gas.png',
-                          //   width: 20,
-                          //   height: 20,
-                          // ),
+                          child: Image.asset(
+                            'assets/stranger.png',
+                            width: 20,
+                            height: 20,
+                          ),
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: height * 0.01),
@@ -454,7 +488,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Suma detected in Hallway ',
+                            'Fall detected in Hallway',
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: width * 0.032,
@@ -462,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Text(
-                            '6:18 PM',
+                            '2:45 AM',
                             style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: width * 0.029,
@@ -476,31 +510,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: height * 0.047),
-              Container(
-                height: height * 0.057,
-                width: width * 0.52,
-                decoration: BoxDecoration(
-                  color: AppColors.lightNavy,
-                  borderRadius: BorderRadius.circular(width * 0.053),
-                  border: Border.all(
-                    color: AppColors.red,
-                    width: width * 0.0013,
-                  ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.lightNavy,
+                  // borderRadius: BorderRadius.circular(width * 0.053),
+                  side: BorderSide(color: AppColors.red, width: width * 0.0013),
+                  minimumSize: Size(width * 0.52, height * 0.057),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: width * 0.045,
-                    vertical: height * 0.012,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Emergency Call',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat',
-                        fontSize: width * 0.04,
-                        color: AppColors.red,
-                      ),
-                    ),
+                onPressed: () {
+                  Navigator.pushNamed(context, ScreenConst.emergencyCallScreen);
+                },
+                child: Text(
+                  'Emergency Call',
+                  style: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontSize: width * 0.04,
+                    color: AppColors.red,
                   ),
                 ),
               ),

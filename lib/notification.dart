@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grad_project/core/const.dart';
-//import 'package:gradapp/core/const.dart';
 
-class Notifications extends StatelessWidget {
-  const Notifications({super.key});
+class NotificationScreen extends StatelessWidget {
+  const NotificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,8 @@ class Notifications extends StatelessWidget {
                     fontFamily: 'Montserrat',
                   ),
                 ),
-                SizedBox(height: 29),
+                SizedBox(height: height * 0.04),
+                //-------------------------------
                 Container(
                   height: 66,
                   width: 328,
@@ -39,13 +39,17 @@ class Notifications extends StatelessWidget {
                     borderRadius: BorderRadius.circular(width * 0.053),
                   ),
 
-                  child: Column(
-                    children: [
-                      SizedBox(height: height * 0.016),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                      vertical: 10,
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
                               'ACTIVITY',
                               style: TextStyle(
                                 color: AppColors.grey,
@@ -53,36 +57,41 @@ class Notifications extends StatelessWidget {
                                 fontFamily: 'Montserrat',
                               ),
                             ),
-                          ),
 
-                          Text(
-                            'IMAGE',
-                            style: TextStyle(
-                              color: AppColors.grey,
-                              fontSize: 11,
-                              fontFamily: 'Montserrat',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Padding(
-                              padding: EdgeInsets.only(left: width * 0.053),
-                              child: Text(
-                                'Suma detected in Hallway',
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 13,
-                                  fontFamily: 'Montserrat',
-                                ),
+                            Text(
+                              'IMAGE',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
+                          ],
+                        ),
+                        SizedBox(height: 5),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Fire detected in Kitchen',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 13,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              '6:18 AM',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
 
@@ -101,34 +110,56 @@ class Notifications extends StatelessWidget {
                   ),
 
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                      vertical: 10,
+                    ),
+                    child: Column(
                       children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
-                          ),
-                          child: Icon(
-                            Icons.medical_services,
-                            color: AppColors.blue,
-                          ),
-                        ),
-                        SizedBox(width: width * 0.056),
-
-                        Expanded(
-                          child: Text(
-                            'Medical Services',
-                            style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: width * 0.048,
-                              fontFamily: 'Montserrat',
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'ACTIVITY',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
                             ),
-                          ),
+
+                            Text(
+                              'IMAGE',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
                         ),
-                        Icon(Icons.phone, color: AppColors.blue),
+                        SizedBox(height: 5),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'Fall detected in Hallway',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 13,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              '2:45 AM',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -148,34 +179,56 @@ class Notifications extends StatelessWidget {
                   ),
 
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                      vertical: 10,
+                    ),
+                    child: Column(
                       children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
-                          ),
-                          child: Icon(
-                            Icons.fire_extinguisher_outlined,
-                            color: AppColors.blue,
-                          ),
-                        ),
-                        SizedBox(width: width * 0.056),
-                        Expanded(
-                          child: Text(
-                            'Fire Department',
-                            style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: width * 0.048,
-                              fontFamily: 'Montserrat',
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'ACTIVITY',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
                             ),
-                          ),
-                        ),
 
-                        Icon(Icons.phone, color: AppColors.blue),
+                            Text(
+                              'IMAGE',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 5),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'The Elderly is safe',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 13,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              '5:30 PM',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
@@ -195,36 +248,60 @@ class Notifications extends StatelessWidget {
                   ),
 
                   child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                      vertical: 10,
+                    ),
+                    child: Column(
                       children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
-                          ),
-                          child: Icon(Icons.person, color: AppColors.blue),
-                        ),
-                        SizedBox(width: width * 0.056),
-                        Expanded(
-                          child: Text(
-                            'Police',
-                            style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: width * 0.048,
-                              fontFamily: 'Montserrat',
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'ACTIVITY',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
                             ),
-                          ),
-                        ),
 
-                        Icon(Icons.phone, color: AppColors.blue),
+                            Text(
+                              'IMAGE',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 5),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              'New person detected in Hallway',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 13,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                            Text(
+                              '3:50 AM',
+                              style: TextStyle(
+                                color: AppColors.grey,
+                                fontSize: 11,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
+                          ],
+                        ),
                       ],
                     ),
                   ),
                 ),
-
                 Spacer(),
                 Container(
                   height: height * 0.057,

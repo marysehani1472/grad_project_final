@@ -27,179 +27,213 @@ class MenuScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: height * 0.0345),
-                Container(
-                  height: height * 0.12,
-                  width: width * 0.92,
-                  decoration: BoxDecoration(
-                    color: AppColors.lightNavy,
-                    border: Border.all(
-                      color: AppColors.grey,
-                      width: width * 0.0018,
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, ScreenConst.profileScreen);
+                  },
+                  child: Container(
+                    height: height * 0.12,
+                    width: width * 0.92,
+                    decoration: BoxDecoration(
+                      color: AppColors.lightNavy,
+                      border: Border.all(
+                        color: AppColors.grey,
+                        width: width * 0.0018,
+                      ),
+                      borderRadius: BorderRadius.circular(width * 0.053),
                     ),
-                    borderRadius: BorderRadius.circular(width * 0.053),
-                  ),
 
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: width * 0.053),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: width * 0.12,
+                            height: width * 0.12,
+                            decoration: BoxDecoration(
+                              color: AppColors.paleBlue,
+                              borderRadius: BorderRadius.circular(width * 0.08),
+                            ),
+                            child: Icon(
+                              Icons.person,
+                              color: AppColors.blue,
+                              size: 30,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: width * 0.056),
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Profile',
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: width * 0.048,
-                                  fontFamily: 'Montserrat',
+                          SizedBox(width: width * 0.056),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Profile',
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontSize: width * 0.048,
+                                    fontFamily: 'Montserrat',
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                'View elder ID, home address, and emergency info',
-                                style: TextStyle(
-                                  color: AppColors.grey,
-                                  fontSize: width * 0.032,
+                                Text(
+                                  'View elder ID, home address, and emergency info',
+                                  style: TextStyle(
+                                    color: AppColors.grey,
+                                    fontSize: width * 0.032,
+                                  ),
+                                  softWrap: true,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
-                                softWrap: true,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
 
-                        Icon(Icons.arrow_forward_ios, color: AppColors.blue),
-                      ],
+                          Icon(Icons.arrow_forward_ios, color: AppColors.blue),
+                        ],
+                      ),
                     ),
                   ),
                 ),
 
                 //--------------------------------------------------------------------------------------------------------
                 SizedBox(height: width * 0.056),
-                Container(
-                  height: height * 0.12,
-                  width: width * 0.92,
-                  decoration: BoxDecoration(
-                    color: AppColors.lightNavy,
-                    border: Border.all(
-                      color: AppColors.grey,
-                      width: width * 0.0018,
+
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(
+                      context,
+                      ScreenConst.managePeopleScreen,
+                    );
+                  },
+                  child: Container(
+                    height: height * 0.12,
+                    width: width * 0.92,
+                    decoration: BoxDecoration(
+                      color: AppColors.lightNavy,
+                      border: Border.all(
+                        color: AppColors.grey,
+                        width: width * 0.0018,
+                      ),
+                      borderRadius: BorderRadius.circular(width * 0.053),
                     ),
-                    borderRadius: BorderRadius.circular(width * 0.053),
-                  ),
 
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: width * 0.053),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: width * 0.12,
+                            height: width * 0.12,
+                            decoration: BoxDecoration(
+                              color: AppColors.paleBlue,
+                              borderRadius: BorderRadius.circular(width * 0.08),
+                            ),
+                            child: Icon(
+                              Icons.person,
+                              color: AppColors.blue,
+                              size: 30,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: width * 0.056),
+                          SizedBox(width: width * 0.056),
 
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Manage People',
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: width * 0.048,
-                                  fontFamily: 'Montserrat',
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Manage People',
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontSize: width * 0.048,
+                                    fontFamily: 'Montserrat',
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                'Add or remove people for face recognition',
-                                style: TextStyle(
-                                  color: AppColors.grey,
-                                  fontSize: width * 0.032,
+                                Text(
+                                  'Add or remove people for face recognition',
+                                  style: TextStyle(
+                                    color: AppColors.grey,
+                                    fontSize: width * 0.032,
+                                  ),
+                                  softWrap: true,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
-                                softWrap: true,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                        Icon(Icons.arrow_forward_ios, color: AppColors.blue),
-                      ],
+                          Icon(Icons.arrow_forward_ios, color: AppColors.blue),
+                        ],
+                      ),
                     ),
                   ),
                 ),
                 //--------------------------------------------------------------------------------------------------------
                 SizedBox(height: width * 0.056),
-                Container(
-                  height: height * 0.12,
-                  width: width * 0.92,
-                  decoration: BoxDecoration(
-                    color: AppColors.lightNavy,
-                    border: Border.all(
-                      color: AppColors.grey,
-                      width: width * 0.0018,
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, ScreenConst.HelpSupportScreen);
+                  },
+                  child: Container(
+                    height: height * 0.12,
+                    width: width * 0.92,
+                    decoration: BoxDecoration(
+                      color: AppColors.lightNavy,
+                      border: Border.all(
+                        color: AppColors.grey,
+                        width: width * 0.0018,
+                      ),
+                      borderRadius: BorderRadius.circular(width * 0.053),
                     ),
-                    borderRadius: BorderRadius.circular(width * 0.053),
-                  ),
 
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: width * 0.053),
-                    child: Row(
-                      children: [
-                        Container(
-                          width: width * 0.12,
-                          height: width * 0.12,
-                          decoration: BoxDecoration(
-                            color: AppColors.paleBlue,
-                            borderRadius: BorderRadius.circular(width * 0.08),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(horizontal: width * 0.053),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: width * 0.12,
+                            height: width * 0.12,
+                            decoration: BoxDecoration(
+                              color: AppColors.paleBlue,
+                              borderRadius: BorderRadius.circular(width * 0.08),
+                            ),
+                            child: Icon(
+                              Icons.person,
+                              color: AppColors.blue,
+                              size: 30,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: width * 0.056),
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Help & Support',
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: width * 0.048,
-                                  fontFamily: 'Montserrat',
+                          SizedBox(width: width * 0.056),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Help & Support',
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontSize: width * 0.048,
+                                    fontFamily: 'Montserrat',
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                'User guide and troubleshooting tips',
-                                style: TextStyle(
-                                  color: AppColors.grey,
-                                  fontSize: width * 0.032,
+                                Text(
+                                  'User guide and troubleshooting tips',
+                                  style: TextStyle(
+                                    color: AppColors.grey,
+                                    fontSize: width * 0.032,
+                                  ),
+                                  softWrap: true,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
                                 ),
-                                softWrap: true,
-                                maxLines: 2,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
 
-                        Icon(Icons.arrow_forward_ios, color: AppColors.blue),
-                      ],
+                          Icon(Icons.arrow_forward_ios, color: AppColors.blue),
+                        ],
+                      ),
                     ),
                   ),
                 ),
