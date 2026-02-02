@@ -35,9 +35,14 @@ class RemoteScreen extends StatelessWidget {
                     border: Border.all(color: AppColors.grey, width: 0.66),
                     borderRadius: BorderRadius.circular(0),
                   ),
-                  child: Image.asset(
-                    'assets/camera_view.jpg',
-                    fit: BoxFit.cover,
+                  // child: Image.asset(
+                  //   'assets/camera_view.jpg',
+                  //   fit: BoxFit.cover,
+                  // ),
+                  child: Icon(
+                    Icons.videocam_off,
+                    color: AppColors.grey,
+                    size: 50,
                   ),
                   // child: Center(
                   //   child: SvgPicture.asset(

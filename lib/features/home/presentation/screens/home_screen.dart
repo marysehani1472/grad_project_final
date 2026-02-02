@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
-                        horizontal: width * 0.045,
+                        horizontal: width * 0.035,
                         //vertical: height * 0.012,
                       ),
                       child: Row(

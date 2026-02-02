@@ -131,56 +131,178 @@ class ProfileScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Column(
-                        children: [
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              'HOME ADDRESS',
-                              style: TextStyle(
-                                color: AppColors.grey,
-                                fontSize: width * 0.032,
-                                fontFamily: 'Montserrat',
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 10,
+                        ),
+                        child: Column(
+                          children: [
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'MIDICAL CONDITIONS',
+                                style: TextStyle(
+                                  color: AppColors.grey,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              '23 Dr Mohammed Nagy, 6th of October',
-                              style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: width * 0.032,
-                                fontFamily: 'Montserrat',
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'Type 2 diabetes, hypertension',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              'BIRTHDATE',
-                              style: TextStyle(
-                                color: AppColors.grey,
-                                fontSize: width * 0.032,
-                                fontFamily: 'Montserrat',
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'BLOOD TYPE',
+                                style: TextStyle(
+                                  color: AppColors.grey,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                          ),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Text(
-                              '22 July 2003',
-                              style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: width * 0.032,
-                                fontFamily: 'Montserrat',
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'O Positive (O+)',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
                               ),
                             ),
-                          ),
-                          Divider(color: AppColors.grey, thickness: 1),
-                        ],
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'ALLERGIES',
+                                style: TextStyle(
+                                  color: AppColors.grey,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'Penicillin, peanuts, Latex',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'MEDICATIONS',
+                                style: TextStyle(
+                                  color: AppColors.grey,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'Metformin (500mg), Lisinopril (10mg)',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            Divider(color: AppColors.grey, thickness: 1),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                'CARE INSTRUCTIONS',
+                                style: TextStyle(
+                                  color: AppColors.grey,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                '"In case of a fall, do not lift manually. Use the lift-assist chair in the hallway."',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: width * 0.032),
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                '"High fall risk. Check the "Safety  logs" robot alerts to inactivity."',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                            SizedBox(height: width * 0.032),
+
+                            Align(
+                              alignment: Alignment.topLeft,
+                              child: Text(
+                                '"Requires medication reminders at 8:00 AM and 8:00 PM daily."',
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: width * 0.032,
+                                  fontFamily: 'Montserrat',
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+              Spacer(),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.lightNavy,
+                  side: BorderSide(
+                    color: AppColors.grey,
+                    width: width * 0.0013,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(width * 0.08),
+                  ),
+                  minimumSize: Size(width * 0.307, height * 0.057),
+                ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'Back',
+                  style: TextStyle(
+                    color: AppColors.blue,
+                    fontSize: width * 0.048,
+                    fontFamily: 'Montserrat',
                   ),
                 ),
               ),
@@ -191,246 +313,3 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// Center(
-//         child: Padding(
-//           padding: const EdgeInsets.symmetric(horizontal: 48),
-//           child: Column(
-//             children: [
-//               SizedBox(height: 50),
-//               Text(
-//                 'Profile',
-//                 style: TextStyle(
-//                   color: AppColors.white,
-//                   fontSize: 21,
-//                   fontFamily: 'Montserrat',
-//                 ),
-//               ),
-//               SizedBox(height: 51),
-//               Padding(
-//                 padding: const EdgeInsets.symmetric(horizontal: 48),
-//                 child: Row(
-//                   children: [
-//                     Container(
-//                       width: 64,
-//                       height: 64,
-//                       decoration: BoxDecoration(
-//                         shape: BoxShape.circle,
-//                         color: AppColors.paleBlue,
-//                       ),
-//                     ),
-//                     SizedBox(width: 21),
-//                     Column(
-//                       crossAxisAlignment: CrossAxisAlignment.start,
-//                       children: [
-//                         Text(
-//                           'Suma Abbas',
-//                           style: TextStyle(
-//                             color: AppColors.white,
-//                             fontSize: 16,
-//                             fontFamily: 'Montserrat',
-//                           ),
-//                         ),
-//                         Text(
-//                           '01225589100',
-//                           style: TextStyle(
-//                             color: AppColors.white,
-//                             fontSize: 16,
-//                             fontFamily: 'Montserrat',
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//               Divider(color: AppColors.grey, thickness: 1),
-//               SizedBox(height: 12),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'HOME ADDRESS',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   '23 Dr Mohammed Nagy, 6th of October City',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'BIRTHDATE',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   '22 July 2003',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Divider(color: AppColors.grey, thickness: 1),
-//               SizedBox(height: 12),
-
-//               Text(
-//                 'MEDICAL CONDITIONS',
-//                 style: TextStyle(
-//                   color: AppColors.grey,
-//                   fontSize: 11,
-//                   fontFamily: 'Montserrat',
-//                 ),
-//               ),
-
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'type 2 diabetes, hypertension',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'BLOOD TYPE',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'O Positive O+',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'ALLERGIES',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Text(
-//                 'Penicillin, peanuts, Latex',
-//                 style: TextStyle(
-//                   color: AppColors.white,
-//                   fontSize: 13,
-//                   fontFamily: 'Montserrat',
-//                 ),
-//               ),
-//               SizedBox(height: 12),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'MEDICATIONS',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'Metformin (500mg), Lisinopril (10mg)',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Divider(color: AppColors.grey, thickness: 1),
-//               SizedBox(height: 12),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'CARE INSTRUCTIONS',
-//                   style: TextStyle(
-//                     color: AppColors.grey,
-//                     fontSize: 11,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'In case of a fall, do not lift manually. Use the lift-assist chair in the hallway ',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               SizedBox(height: 12),
-
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'High fall risk. Check the "Safety  logs" robot alerts to inactivity',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//               SizedBox(height: 12),
-
-//               Padding(
-//                 padding: const EdgeInsets.only(right: 48),
-//                 child: Text(
-//                   'Requires medication reminders at 8:00 AM and 8:00 PM daily',
-//                   style: TextStyle(
-//                     color: AppColors.white,
-//                     fontSize: 13,
-//                     fontFamily: 'Montserrat',
-//                   ),
-//                 ),
-//               ),
-//             ],
-//           ),
-//         ),
-//       ),

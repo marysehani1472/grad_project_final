@@ -77,7 +77,6 @@ flutter:
   assets:
     - assets/images/notification_icon/
     - assets/images/
-    - assets/images/gas_icon/
     - assets/images/home_icon/
     - assets/images/link_logo/
     - assets/fonts/
@@ -86,6 +85,7 @@ flutter:
     - assets/fall.svg
     - assets/fire.svg
     - assets/fire.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

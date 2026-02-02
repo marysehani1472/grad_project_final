@@ -124,7 +124,7 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
           child: BlocConsumer<AuthCubit, AuthState>(
             listener: (context, state) {
               if (state is AuthSuccess) {
-                // بعد تسجيل الدخول أو التسجيل نروح للصفحة الرئيسية
+                print('NAVIGATING TO MAIN');
                 Navigator.pushReplacementNamed(context, ScreenConst.mainScreen);
               } else if (state is AuthError) {
                 ScaffoldMessenger.of(
@@ -228,36 +228,39 @@ class _SignInSignUpScreenState extends State<SignInSignUpScreen> {
                     onPressed: () {
                       Navigator.pushNamed(context, ScreenConst.mainScreen);
                     },
-                    //  isLoading
-                    //     ? null
-                    //     : () {
-                    //         final phone = _phoneController.text.trim();
-                    //         final password = _passwordController.text.trim();
+                    // =>
+                    //     isLoading
+                    //         ? null
+                    //         : () {
+                    //           final phone = _phoneController.text.trim();
+                    //           final password =
+                    //               _passwordController.text.trim();
 
-                    //         if (_isLogin) {
-                    //           context.read<AuthCubit>().signin(
-                    //                 phone: phone,
-                    //                 password: password,
-                    //               );
-                    //         } else {
-                    //           context.read<AuthCubit>().signUp(
-                    //                 phone: phone,
-                    //                 password: password,
-                    //               );
-                    //         }
-                    //       },
+                    //           if (_isLogin) {
+                    //             context.read<AuthCubit>().signin(
+                    //               phone: phone,
+                    //               password: password,
+                    //             );
+                    //           } else {
+                    //             context.read<AuthCubit>().signUp(
+                    //               phone: phone,
+                    //               password: password,
+                    //             );
+                    //           }
+                    //         },
                     child:
-                    // isLoading
-                    //     ? CircularProgressIndicator(color: AppColors.white)
-                    //     :
-                    Text(
-                      _isLogin ? 'Login' : 'Sign Up',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: width * 0.04,
-                        fontFamily: 'Montserrat',
-                      ),
-                    ),
+                        isLoading
+                            ? CircularProgressIndicator(color: AppColors.white)
+                            :
+                            // child:
+                            Text(
+                              _isLogin ? 'Sign In' : 'Sign Up',
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: width * 0.04,
+                                fontFamily: 'Montserrat',
+                              ),
+                            ),
                   ),
 
                   SizedBox(height: 20),
